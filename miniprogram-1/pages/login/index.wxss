@@ -1,0 +1,12 @@
+.login-card {
+  margin-top: 180rpx;
+}
+
+.input {
+  border: 1rpx solid #dce5f2;
+  border-radius: 12rpx;
+  padding: 18rpx;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+  background: #fdfefe;
+}

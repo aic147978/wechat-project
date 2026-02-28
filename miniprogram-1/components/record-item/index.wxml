@@ -1,0 +1,12 @@
+<view class="row">
+  <view>
+    <text class="idx">#{{index + 1}}</text>
+    <text class="weight">{{record.weight}}{{unit}}</text>
+  </view>
+  <view class="status-wrap">
+    <text class="status {{record.status}}">{{record.status}}</text>
+    <text class="time">{{record.timeText}}</text>
+    <text class="more" bindtap="onMore">…</text>
+  </view>
+</view>
+<view wx:if="{{record.note}}" class="note">说明：{{record.note}}</view>

@@ -1,12 +1,36 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/login/index",
+    "pages/weigh/index",
+    "pages/weigh-history/index",
+    "pages/weigh-detail/index",
+    "pages/mine/index",
+    "pages/farms/index",
+    "pages/farm-form/index",
+    "pages/users/index",
+    "pages/user-form/index",
+    "pages/offline/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarBackgroundColor": "#ffffff"
+    "navigationBarTitleText": "智能蓝牙鸡称",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#f6f8fb"
+  },
+  "tabBar": {
+    "color": "#7a7e83",
+    "selectedColor": "#2f80ed",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/weigh/index",
+        "text": "称重"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的"
+      }
+    ]
   },
   "style": "v2",
   "componentFramework": "glass-easel",

@@ -1,0 +1,7 @@
+<view class="container">
+  <button class="primary-btn" bindtap="onAdd">新增养殖场</button>
+  <view class="card" wx:for="{{farms}}" wx:key="id" data-id="{{item.id}}" bindtap="onEdit">
+    <view>{{item.name}}</view>
+    <view class="subtle">点击编辑</view>
+  </view>
+</view>

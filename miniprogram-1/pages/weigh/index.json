@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "称重",
+  "usingComponents": {
+    "session-card": "/components/session-card/index",
+    "record-item": "/components/record-item/index"
+  }
+}

@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="card">
+    <input class="input" placeholder="养殖场名称" bindinput="onInput" value="{{name}}" />
+    <button class="primary-btn" bindtap="onSave">保存</button>
+  </view>
+</view>

@@ -1,19 +1,8 @@
-// app.js
+const { ensureBootstrap } = require('./utils/storage')
+
 App({
   onLaunch() {
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
-  },
-  globalData: {
-    userInfo: null
+    // 启动时初始化 mock 数据，确保离线环境可完整运行。
+    ensureBootstrap()
   }
 })

@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="card">
+    <view class="title">1. 扫码设备</view>
+    <view class="subtle" style="margin: 12rpx 0;">设备号：{{deviceId || '未扫描'}}</view>
+    <button class="primary-btn" bindtap="onScan">扫码绑定设备</button>
+  </view>
+
+  <view class="card">
+    <view class="title">2. 连接状态</view>
+    <view class="status {{connectionStatus}}">{{connectionLabel}}</view>
+    <button class="primary-btn" bindtap="onConnect">开始连接</button>
+  </view>
+
+  <view class="card">
+    <view class="title">3. 批次信息</view>
+    <input class="input" placeholder="批次号" bindinput="onBatchInput" value="{{batchNo}}"/>
+    <picker mode="selector" range="{{farms}}" range-key="name" bindchange="onFarmChange">
+      <view class="picker">养殖场：{{currentFarmName}}</view>
+    </picker>
+    <picker mode="selector" range="{{units}}" bindchange="onUnitChange">
+      <view class="picker">单位：{{units[unitIndex]}}</view>
+    </picker>
+    <radio-group bindchange="onGradeChange">
+      <label class="radio-item"><radio value="0" checked="{{gradeMode==='normal'}}"/>普通</label>
+      <label class="radio-item"><radio value="1" checked="{{gradeMode==='smart'}}"/>智能</label>
+      <label class="radio-item"><radio value="2" checked="{{gradeMode==='manual'}}"/>手动</label>
+    </radio-group>
+  </view>
+
+  <view class="card">
+    <view class="header-row">
+      <view class="title">4. 称重记录</view>
+      <view class="subtle">共 {{records.length}} 条</view>
+    </view>
+    <view class="btn-row">
+      <button size="mini" type="primary" bindtap="onAddRecord">新增记录</button>
+      <button size="mini" bindtap="onClearRecords">清除记录</button>
+    </view>
+    <record-item wx:for="{{records}}" wx:key="id" record="{{item}}" index="{{index}}" unit="{{units[unitIndex]}}" bind:more="onRecordMore" />
+    <button class="primary-btn" style="margin-top: 20rpx;" bindtap="onFinish">结束称重并保存</button>
+  </view>
+
+  <view class="card">
+    <view class="header-row">
+      <view class="title">历史记录（最近5条）</view>
+      <text class="more-link" bindtap="onOpenHistory">更多 ></text>
+    </view>
+    <session-card wx:for="{{recentSessions}}" wx:key="id" session="{{item}}" farmName="{{item.farmName}}" bind:tapcard="onOpenSession" />
+  </view>
+</view>

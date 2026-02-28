@@ -1,0 +1,30 @@
+.session-card {
+  border: 1rpx solid #e8eef6;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  margin-bottom: 16rpx;
+  background: #fff;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8rpx;
+}
+
+.device {
+  font-weight: 600;
+}
+
+.unit {
+  color: #2f80ed;
+}
+
+.line {
+  margin-top: 6rpx;
+  font-size: 24rpx;
+}
+
+.subtle {
+  color: #8193a8;
+}

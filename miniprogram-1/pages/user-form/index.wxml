@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="card">
+    <input class="input" placeholder="用户名" bindinput="onNameInput" value="{{name}}" />
+    <picker mode="selector" range="{{roles}}" bindchange="onRoleChange">
+      <view class="picker">角色：{{role}}</view>
+    </picker>
+    <picker mode="selector" range="{{farms}}" range-key="name" bindchange="onFarmChange">
+      <view class="picker">所属养殖场：{{currentFarmName}}</view>
+    </picker>
+    <button class="primary-btn" bindtap="onSave">保存</button>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="card login-card">
+    <view class="title">智能蓝牙鸡称</view>
+    <view class="subtle" style="margin: 12rpx 0 28rpx;">仅前端 mock 登录，验证码固定 123456</view>
+    <input class="input" type="number" maxlength="11" placeholder="请输入手机号" bindinput="onPhoneInput" value="{{phone}}" />
+    <input class="input" type="number" maxlength="6" placeholder="请输入验证码" bindinput="onCodeInput" value="{{code}}" />
+    <button class="primary-btn" bindtap="onLogin">登录</button>
+  </view>
+</view>
