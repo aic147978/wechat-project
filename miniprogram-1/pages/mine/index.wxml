@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="card">
+    <view class="title">{{userProfile.name}}</view>
+    <view class="subtle">角色：{{userProfile.role}} | 手机：{{userProfile.phone}}</view>
+  </view>
+
+  <view class="card item" bindtap="goFarms">
+    <text>养殖场管理</text>
+    <text class="subtle">{{farmCount}} 个 ></text>
+  </view>
+  <view class="card item" bindtap="goUsers">
+    <text>用户管理</text>
+    <text class="subtle">{{userCount}} 人 ></text>
+  </view>
+  <view class="card item" bindtap="goOffline">
+    <text>无网络称重说明</text>
+    <text class="subtle">查看 ></text>
+  </view>
+
+  <button bindtap="onLogout">退出登录</button>
+</view>

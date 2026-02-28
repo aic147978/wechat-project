@@ -1,0 +1,33 @@
+<view class="container" wx:if="{{session}}">
+  <view class="card">
+    <view class="title">批次信息</view>
+    <view class="line">批次号：{{session.batchNo}}</view>
+    <view class="line">设备号：{{session.deviceId}}</view>
+    <view class="line">养殖场：{{session.farmName}}</view>
+    <view class="line">体型模式：{{session.gradeMode}}</view>
+    <view class="line">开始：{{session.startText}}</view>
+    <view class="line">结束：{{session.endText}}</view>
+  </view>
+
+  <view class="card">
+    <view class="title">统计</view>
+    <view class="line">均值：{{stats.avg}}{{session.unit}}</view>
+    <view class="line">最小：{{stats.min}}{{session.unit}}</view>
+    <view class="line">最大：{{stats.max}}{{session.unit}}</view>
+    <view class="line">数量：{{stats.count}} 条</view>
+  </view>
+
+  <view class="card">
+    <view class="title">体重分布（占位柱状图）</view>
+    <view class="bar-row" wx:for="{{bars}}" wx:key="label">
+      <text class="label">{{item.label}}</text>
+      <view class="bar-wrap"><view class="bar" style="width: {{item.width}};"></view></view>
+      <text class="count">{{item.count}}</text>
+    </view>
+  </view>
+
+  <view class="card action-row">
+    <button size="mini" bindtap="onFakeExport">导出 Excel（模拟）</button>
+    <button size="mini" type="primary" bindtap="onFakeShare">分享（模拟）</button>
+  </view>
+</view>

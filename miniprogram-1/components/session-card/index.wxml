@@ -1,0 +1,10 @@
+<view class="session-card" bindtap="onTapCard">
+  <view class="top">
+    <text class="device">{{session.deviceId}}</text>
+    <text class="unit">{{session.unit}}</text>
+  </view>
+  <view class="line">批次：{{session.batchNo || session.id}}</view>
+  <view class="line">养殖场：{{farmName}}</view>
+  <view class="line">记录数：{{session.records.length}} 条</view>
+  <view class="line subtle">结束时间：{{session.endAtText}}</view>
+</view>

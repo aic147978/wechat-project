@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="card">
+    <view class="title">无网络称重策略</view>
+    <view class="line">1. 所有批次、用户、养殖场信息均存储在本地 storage。</view>
+    <view class="line">2. 断网时可继续扫码（模拟）与新增称重记录。</view>
+    <view class="line">3. 重新打开小程序后，历史批次会从本地缓存恢复。</view>
+    <view class="line">4. 当前演示不接入真实蓝牙与后端接口。</view>
+  </view>
+</view>

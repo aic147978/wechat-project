@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "历史批次",
+  "usingComponents": {
+    "session-card": "/components/session-card/index"
+  }
+}

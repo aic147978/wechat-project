@@ -1,0 +1,7 @@
+<view class="container">
+  <button class="primary-btn" bindtap="onAdd">新增用户</button>
+  <view class="card" wx:for="{{users}}" wx:key="id" data-id="{{item.id}}" bindtap="onEdit">
+    <view>{{item.name}}（{{item.role}}）</view>
+    <view class="subtle">管理场：{{item.farmNames || '无'}}</view>
+  </view>
+</view>

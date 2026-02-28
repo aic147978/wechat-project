@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="card">
+    <input class="input" placeholder="按设备号/日期/用户名搜索" bindinput="onInput" value="{{keyword}}" />
+  </view>
+  <view class="card">
+    <view class="subtle" style="margin-bottom: 12rpx;">共 {{list.length}} 条</view>
+    <session-card wx:for="{{list}}" wx:key="id" session="{{item}}" farmName="{{item.farmName}}" bind:tapcard="onOpen" />
+  </view>
+</view>

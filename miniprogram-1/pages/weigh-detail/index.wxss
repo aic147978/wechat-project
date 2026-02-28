@@ -1,0 +1,23 @@
+.line { margin-top: 10rpx; }
+.bar-row {
+  margin-top: 16rpx;
+  display: flex;
+  align-items: center;
+}
+.label { width: 170rpx; font-size: 24rpx; }
+.bar-wrap {
+  flex: 1;
+  height: 18rpx;
+  background: #eef3fb;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.bar {
+  height: 100%;
+  background: linear-gradient(90deg, #5ca9ff, #2f80ed);
+}
+.count { width: 60rpx; text-align: right; }
+.action-row {
+  display: flex;
+  justify-content: space-between;
+}
